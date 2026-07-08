@@ -8,10 +8,10 @@ public class AnalistaModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    String nome;
-    String email;
-    String senioridade;
+    private Long id;
+    private String nome;
+    private String email;
+    private String senioridade;
 
     public AnalistaModel() {
     }

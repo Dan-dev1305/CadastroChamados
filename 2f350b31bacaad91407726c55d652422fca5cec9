@@ -1,0 +1,17 @@
+[33mcommit 6540612205cc12006b1d277c7f872a7b103f942a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Dan-dev1305 <danielgoncalves.paz@gmail.com>
+Date:   Tue Jul 7 21:47:59 2026 -0300
+
+    Cria uma entidade no banco de dados a partir do AnalistaModel
+
+[33mcommit c753be568a667a0947efafa5f09d1a86aefb1b41[m
+Author: unknown <Administrator@ROMERITO.AD>
+Date:   Tue Jul 7 14:00:04 2026 -0300
+
+    Primeira rota
+
+[33mcommit 2f350b31bacaad91407726c55d652422fca5cec9[m
+Author: unknown <Administrator@ROMERITO.AD>
+Date:   Tue Jul 7 13:19:37 2026 -0300
+
+    first commit
