@@ -1,4 +1,4 @@
-package br.com.cadastrochamados.cadastrochamados;
+package br.com.cadastrochamados.cadastrochamados.Analistas;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

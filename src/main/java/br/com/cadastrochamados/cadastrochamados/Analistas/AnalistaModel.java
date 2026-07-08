@@ -1,6 +1,8 @@
-package br.com.cadastrochamados.cadastrochamados;
+package br.com.cadastrochamados.cadastrochamados.Analistas;
 
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_cadastro")
@@ -12,6 +14,7 @@ public class AnalistaModel {
     private String nome;
     private String email;
     private String senioridade;
+    private List<ChamadosModel> chamados;
 
     public AnalistaModel() {
     }
