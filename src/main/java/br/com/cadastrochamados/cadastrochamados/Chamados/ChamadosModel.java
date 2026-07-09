@@ -15,7 +15,8 @@ public class ChamadosModel {
     private int numeroEquipamento;
     private String responsaveChamado;
     private String dificuldadeChamado;
-    private AnalistaModel analista;
+    @OneToMany (mappedBy = "chamados")
+    private List<AnalistaModel> analistas;
 
     public ChamadosModel() {
     }

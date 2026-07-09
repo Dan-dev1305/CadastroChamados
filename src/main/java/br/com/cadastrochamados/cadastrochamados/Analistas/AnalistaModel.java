@@ -1,5 +1,6 @@
 package br.com.cadastrochamados.cadastrochamados.Analistas;
 
+import br.com.cadastrochamados.cadastrochamados.Chamados.ChamadosModel;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -14,7 +15,9 @@ public class AnalistaModel {
     private String nome;
     private String email;
     private String senioridade;
-    private List<ChamadosModel> chamados;
+    @ManyToOne
+    @JoinColumn(name = "chamados_id")
+    private ChamadosModel chamados;
 
     public AnalistaModel() {
     }
