@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping
 public class AnalistaController {
 
-    @GetMapping("/primeiraMsg")
+    @GetMapping("/analistaMsg")
     public String menssagemInicial(){
-        return "Esta é o primeiro comando nessa rota";
+        return "Resposta Analista";
     }
 }
