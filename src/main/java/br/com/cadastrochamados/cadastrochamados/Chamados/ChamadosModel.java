@@ -16,9 +16,16 @@ public class ChamadosModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "numero_equipamento")
     private int numeroEquipamento;
-    private String responsaveChamado;
+
+    @Column(name = "responsavel_chamado")
+    private String responsavelChamado;
+
+    @Column(name = "dificuldade_chamado")
     private String dificuldadeChamado;
+
     @OneToMany (mappedBy = "chamados")
     private List<AnalistaModel> analistas;}
 
