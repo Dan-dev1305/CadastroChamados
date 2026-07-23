@@ -2,9 +2,18 @@ package br.com.cadastrochamados.cadastrochamados.Analistas;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
-@RequestMapping
+@RequestMapping("/analistas")
 public class AnalistaController {
+    private final AnalistasService analistasService;
+    private AnalistaRepository analistaRepository;
+
+    public AnalistaController(AnalistaRepository analistaRepository, AnalistasService analistasService) {
+        this.analistaRepository = analistaRepository;
+        this.analistasService = analistasService;
+    }
 
     @GetMapping("/analistaMsg")
     public String menssagemInicial(){
@@ -19,8 +28,8 @@ public class AnalistaController {
 
     // Mostrar todos os analistas (REad)
     @GetMapping ("/todos")
-    public String mostrarTodosAnalistas(){
-        return "Mostrar todos os analistas";
+    public List<AnalistaModel> mostrarTodosAnalistas(){
+        return analistasService.listarAnalistas();
     }
 
     // Mostrar todos os analistas por ID (REad)
