@@ -33,9 +33,9 @@ public class AnalistaController {
     }
 
     // Mostrar todos os analistas por ID (REad)
-    @GetMapping ("/todosId")
-    public String mostrarTodosAnalistasPorId(){
-        return "Mostrar todos os analistas";
+    @GetMapping ("/todos/{id}")
+    public AnalistaModel listarAnalistasPorId(@PathVariable long id){
+        return analistasService.listarAnalistasPorId(id);
     }
 
     //Alterar dados dos analistas (Update)
