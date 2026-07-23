@@ -22,8 +22,8 @@ public class AnalistaController {
 
     // Adicionar Analista (Create)
     @PostMapping ("/criar")
-    public String criarAnalista(){
-        return "Analista criado";
+    public AnalistaModel criarAnalista(@RequestBody AnalistaModel analista){
+        return analistasService.criarAnalista(analista);
     }
 
     // Mostrar todos os analistas (REad)

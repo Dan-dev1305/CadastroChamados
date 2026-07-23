@@ -23,4 +23,9 @@ public class AnalistasService {
         Optional<AnalistaModel> analistaModel = analistaRepository.findById(id);
         return analistaModel.orElse(null);
     }
+
+    //Criar um novo analista
+    public AnalistaModel criarAnalista(AnalistaModel analista){
+        return analistaRepository.save(analista);
+    }
 }
