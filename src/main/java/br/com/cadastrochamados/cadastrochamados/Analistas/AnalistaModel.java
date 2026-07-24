@@ -12,7 +12,7 @@ import java.util.List;
 @RequiredArgsConstructor
 
 @Entity
-@Table(name = "tb_cadastro")
+@Table(name = "tb_analista")
 public class AnalistaModel {
 
     @Id
