@@ -9,6 +9,7 @@ import java.util.Optional;
 public class AnalistasService {
     private AnalistaRepository analistaRepository;
 
+    private AnalistaModel analistaModel;
     public AnalistasService(AnalistaRepository analistaRepository) {
         this.analistaRepository = analistaRepository;
     }

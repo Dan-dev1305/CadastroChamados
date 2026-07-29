@@ -1,6 +1,7 @@
 package br.com.cadastrochamados.cadastrochamados.Chamados;
 
 import br.com.cadastrochamados.cadastrochamados.Analistas.AnalistaModel;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -25,6 +26,8 @@ public class ChamadosModel {
 
     @Column(name = "dificuldade_chamado")
     private String dificuldadeChamado;
+
+    @JsonIgnore
 
     @OneToMany (mappedBy = "chamados")
     private List<AnalistaModel> analistas;}
