@@ -39,9 +39,9 @@ public class AnalistaController {
     }
 
     //Alterar dados dos analistas (Update)
-    @PutMapping ("/alterarId")
-    public String alterarAnalistasPorId(){
-        return "Analista alterado";
+    @PutMapping ("/alterarId/{id}")
+    public AnalistaModel alterarAnalistasPorId(@PathVariable Long id, @RequestBody AnalistaModel analistaAtualizado){
+        return analistasService.atualizarAnalista(id, analistaAtualizado);
     }
 
     //Deletar Analistas (Delete)
