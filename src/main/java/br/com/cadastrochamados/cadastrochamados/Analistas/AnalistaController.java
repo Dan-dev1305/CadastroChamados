@@ -45,8 +45,8 @@ public class AnalistaController {
     }
 
     //Deletar Analistas (Delete)
-    @DeleteMapping ("/deletarId")
-    public String deletarAnalistaPorId(){
-        return "Analista deletado";
+    @DeleteMapping ("/deletar/{id}")
+    public void deletarAnalistaPorId(@PathVariable Long id){
+        analistasService.deletarAnalistaPorId(id);
     }
 }

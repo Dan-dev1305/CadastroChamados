@@ -29,4 +29,9 @@ public class AnalistasService {
     public AnalistaModel criarAnalista(AnalistaModel analista){
         return analistaRepository.save(analista);
     }
+
+    //Deletar um analista - tem que ser void
+    public void deletarAnalistaPorId(Long id){
+         analistaRepository.deleteById(id);
+    }
 }
