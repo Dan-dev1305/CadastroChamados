@@ -6,10 +6,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 @Data
 @RequiredArgsConstructor
+
 
 @Entity
 @Table(name = "tb_analista")
@@ -27,6 +29,9 @@ public class AnalistaModel {
 
     @Column(name = "nivel_senioridade")
     private String senioridade;
+
+    @Column(name = "especialidade")
+    private String especialidade;
 
     @ManyToOne
     @JoinColumn(name = "chamados_id")
