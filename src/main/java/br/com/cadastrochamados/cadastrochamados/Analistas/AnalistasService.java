@@ -8,10 +8,13 @@ import java.util.Optional;
 @Service
 public class AnalistasService {
     private AnalistaRepository analistaRepository;
+    private AnalistaMapper analistaMapper;
 
-    private AnalistaModel analistaModel;
-    public AnalistasService(AnalistaRepository analistaRepository) {
+
+    public AnalistasService(AnalistaRepository analistaRepository, AnalistaMapper analistaMapper) {
         this.analistaRepository = analistaRepository;
+        this.analistaMapper = analistaMapper;
+
     }
 
     //Listar os analistas
@@ -26,8 +29,11 @@ public class AnalistasService {
     }
 
     //Criar um novo analista
-    public AnalistaModel criarAnalista(AnalistaModel analista){
-        return analistaRepository.save(analista);
+    public AnalistaDTO criarAnalista(AnalistaDTO analistaDTO){
+        AnalistaModel analista = analistaMapper.map(analistaDTO);
+        analista = analistaRepository.save(analista);
+        return analistaMapper.map(analista);
+
     }
 
     //Atualizar analista

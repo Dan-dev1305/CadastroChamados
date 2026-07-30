@@ -22,7 +22,7 @@ public class AnalistaController {
 
     // Adicionar Analista (Create)
     @PostMapping ("/criar")
-    public AnalistaModel criarAnalista(@RequestBody AnalistaModel analista){
+    public AnalistaDTO criarAnalista(@RequestBody AnalistaDTO analista){
         return analistasService.criarAnalista(analista);
     }
 
